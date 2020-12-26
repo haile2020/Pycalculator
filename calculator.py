@@ -1,6 +1,13 @@
 #import tkinter
 from tkinter import *
 
+exp = ''
+
+#create press function
+def press(n):
+    global exp
+    exp = exp + str(n)
+    user_input.set(exp)
 
 
 if __name__ == "__main__":
