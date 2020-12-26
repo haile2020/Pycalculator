@@ -7,7 +7,7 @@ if __name__ == "__main__":
     #create window
     window = Tk()
     window.title('Calculator!')
-    window.geometry('400x200x400x200')
+    window.geometry('400x400')
 
     user_input = StringVar()
     input_entry = Entry(window, font=('arial', 20, 'bold'), bd=30, bg='gray', width=20, textvariable = user_input)
