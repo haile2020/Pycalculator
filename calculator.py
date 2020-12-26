@@ -9,6 +9,19 @@ def press(n):
     exp = exp + str(n)
     user_input.set(exp)
 
+#create equal function
+# and try block to catch error
+def equal():
+    try:
+        global exp
+        total = str(eval(exp))
+        user_input.set(total)
+        exp = ''
+    except:
+        user_input.set('sorry, Invalid Input')
+        exp= ''
+
+
 
 if __name__ == "__main__":
     #create window
@@ -53,7 +66,7 @@ if __name__ == "__main__":
     btn_clr.grid(row=5, column=2)
     btn_div = Button(window, text = ' / ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=lambda : press('/'))
     btn_div.grid(row=5, column=3)
-    btn_equal = Button(window, text = ' = ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=lambda : press(' = '))
+    btn_equal = Button(window, text = ' = ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=equal)
     btn_equal.grid(row=6, column=3)
     
     
