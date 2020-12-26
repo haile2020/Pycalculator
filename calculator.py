@@ -21,6 +21,13 @@ def equal():
         user_input.set('sorry, Invalid Input')
         exp= ''
 
+# create clear function
+def clear():
+    global exp
+    exp =''
+    user_input.set('')
+
+
 
 
 if __name__ == "__main__":
@@ -60,7 +67,7 @@ if __name__ == "__main__":
     btn_multi.grid(row=4, column=3)
     btn0 = Button(window, text = ' 0 ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=lambda : press(0))
     btn0.grid(row=5, column=0)
-    btn_dec = Button(window, text = ' . ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=lambda : press(' . '))
+    btn_dec = Button(window, text = ' . ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=lambda : press("."))
     btn_dec.grid(row=5, column=1)
     btn_clr = Button(window, text = ' CLR ', font=('arial', 20, 'bold'), bd=5, width=6, height=1, command=lambda : press('CLR'))
     btn_clr.grid(row=5, column=2)
